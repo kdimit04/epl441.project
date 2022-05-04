@@ -10,3 +10,7 @@ Servers/Tomcat v10.0 Server at localhost-config/context.xml
 Servers/Tomcat v10.0 Server at localhost-config/server.xml
 Servers/Tomcat v10.0 Server at localhost-config/tomcat-users.xml
 Servers/Tomcat v10.0 Server at localhost-config/web.xml
+Project/lib/.classpath
+Project/lib/.settings/org.eclipse.wst.common.component
+Servers/.settings/org.eclipse.wst.server.core.prefs
+Servers/Tomcat v10.0 Server at localhost-config/server.xml
