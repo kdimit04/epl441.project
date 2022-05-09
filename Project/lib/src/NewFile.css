@@ -1,0 +1,21 @@
+@charset "UTF-8";
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#treatment_table{
+   margin:25px 0 0 25px;
+    border: 1px solid black;
+  border-collapse: collapse;
+}
+#add_button_treatment{
+	
+    margin-left:200px;
+	
+}
+#conditions_table{
+margin:25px 0 0 50px;
+    border: 1px solid black;
+  border-collapse: collapse;
+	
+}

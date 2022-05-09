@@ -26,6 +26,19 @@ dependencies {
 
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:30.1.1-jre'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.12.0'
+    // https://mvnrepository.com/artifact/commons-logging/commons-logging
+implementation group: 'commons-logging', name: 'commons-logging', version: '1.2'
+    // https://mvnrepository.com/artifact/net.sf.ucanaccess/ucanaccess
+implementation group: 'net.sf.ucanaccess', name: 'ucanaccess', version: '5.0.1'
+    // https://mvnrepository.com/artifact/com.healthmarketscience.jackcess/jackcess
+implementation group: 'com.healthmarketscience.jackcess', name: 'jackcess', version: '4.0.1'
+    // https://mvnrepository.com/artifact/org.hsqldb/hsqldb
+testImplementation group: 'org.hsqldb', name: 'hsqldb', version: '2.6.1'
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client
+implementation group: 'org.glassfish.jersey.core', name: 'jersey-client', version: '3.0.0'
+    
 }
 
 tasks.named('test') {
