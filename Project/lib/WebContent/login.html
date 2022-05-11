@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+
+		#box1{
+			background-color: #9fc5f8;
+			height: 150px;
+	  	width: 1500px;
+			position: relative;
+			margin : auto;
+
+		}
+		#box2{
+			background-color: #073763;
+			height: 1000px;
+	  	width: 100px;
+		}
+
+    button:focus{
+      box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+      border: thick solid #00d7c3;
+    }
+
+    .Search{
+      position:absolute;
+      margin-top:10px;
+      margin-left: 1250px;
+    }
+
+    .ViewPoint{
+      position:absolute;
+      margin-top:10px;
+      margin-left:150px;
+      font-size: 30px;
+      font-weight: bold;
+      color:#073763;
+    }
+
+    /* The container must be positioned relative: */
+    .custom-select {
+      position: relative;
+      font-family: Arial;
+      left: 300px;
+
+    }
+
+    .custom-select select {
+      display: none; /*hide original SELECT element: */
+    }
+
+    .select-selected {
+      background-color: DodgerBlue;
+    }
+
+    /* Style the arrow inside the select element: */
+    .select-selected:after {
+      position: absolute;
+      content: "";
+      top: 14px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: #fff transparent transparent transparent;
+    }
+
+    /* Point the arrow upwards when the select box is open (active): */
+    .select-selected.select-arrow-active:after {
+      border-color: transparent transparent #fff transparent;
+      top: 7px;
+    }
+
+    /* style the items (options), including the selected item: */
+    .select-items div,.select-selected {
+      color: #ffffff;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+    }
+
+    /* Style items (options): */
+    .select-items {
+      position: absolute;
+      background-color: DodgerBlue;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+
+    /* Hide the items when the select box is closed: */
+    .select-hide {
+      display: none;
+    }
+
+    .select-items div:hover, .same-as-selected {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+label[for=uname],label[for=psw] ,label[for=pst]{
+
+    width: 60%;
+    margin-left: 150px ;
+    display: inline-block;
+
+
+}
+
+    input[type=text], input[type=password] {
+  width: 60%;
+  padding: 12px 10px;
+  margin-left: 150px ;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+}
+
+
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+h2 {text-align: center;}
+b {text-align: center;}
+
+		.Logo{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:50px;
+		}
+
+		.Patients_info{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:250px;
+		}
+
+		.Appointments{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:350px;
+		}
+
+		.Not_Attended{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:450px;
+		}
+
+		.LogOut{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:650px;
+		}
+
+	</style>
+</head>
+<body style="background-color: #f0f8ff;">
+	<div id="box1">
+    <div class="ViewPoint">Medical Records</div>
+    <div class="Search">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="searchbtn"></input>
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+		<div id="box2">
+			<button class="Logo">
+				<i class="fa fa-hospital-o"></i>
+			</button>
+			<button class="Patients_info">
+				<i class="fa fa-address-book-o"></i>
+			</button>
+			<button class="Appointments">
+				<i class="fa fa-calendar-o"></i>
+			</button>
+			<button class="Not_Attended">
+				<i class="fa fa-calendar-times-o"></i>
+			</button>
+			<button class="LogOut">
+				<i class="fa fa-power-off"></i>
+			</button>
+		</div>
+	</div>
+
+  <div style="height: 750px; overflow: auto">
+<h2>Log in</h2>
+<label for="pst"><b>position:<br></b></label>
+<div class="custom-select" style="width:200px;">
+  <select>
+    <option value="0">Select Position:</option>
+    <option value="1">Doctor</option>
+    <option value="2">Nurse</option>
+    <option value="3">Medical Staff</option>
+    <option value="4">Health Managment</option>
+  </select>
+  </div>
+
+   <label for="uname"><b>Username:<br></b></label>
+   <input type="text" placeholder="Enter Username" name="uname" required>
+
+   <label for="psw"><b><br>Password:<br></b></label>
+   <input type="password" placeholder="Enter Password" name="psw" required>
+
+   <button type="submit">Login</button>
+   <label>
+     <input type="checkbox" checked="checked" name="remember"> Remember me
+   </label>
+ </div>
+
+ <div class="container" style="background-color:#f1f1f1">
+   <span class="psw">Forgot <a href="#">password?</a></span>
+ </div>
+
+
+
+</body>
+</html>
