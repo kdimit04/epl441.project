@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+
+		#box1{
+			background-color: #9fc5f8;
+			height: 150px;
+	  	width: 1500px;
+			position: relative;
+			margin : auto;
+		}
+		#box2{
+			background-color: #073763;
+			height: 1000px;
+	  	width: 100px;
+		}
+		body {
+  		font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+		}
+		.data_grid{
+			overflow: auto;
+			background-color: white;
+			display: grid;
+		 	border-collapse: collapse;
+			grid-template-columns:
+	    	minmax(75px, 0.6fr)
+	    	minmax(75px, 0.7fr)
+	    	minmax(75px, 0.7fr)
+	    	minmax(75px, 0.8fr)
+	    	minmax(150px, 1fr)
+	    	minmax(150px, 1fr)
+	    	minmax(150px, 1.2fr)
+	    	minmax(75px, 0.75fr);
+			text-align: left;
+			height: 750px;
+			width:1300px;
+			margin-top: 50px;
+			margin-left:150px;
+
+
+		}
+		thead,tbody,tr {
+  		display: contents;
+		}
+		th,td {
+		  padding: 15px;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		  white-space: nowrap;
+		}
+
+		th {
+		  position: sticky;
+		  top: 0;
+		  background: #6c7ae0;
+		  text-align: left;
+		  font-weight: normal;
+		  font-size: 1.1rem;
+		  color: white;
+		}
+
+		th:last-child {
+		  border: 0;
+		}
+
+		td {
+		  padding-top: 10px;
+		  padding-bottom: 10px;
+		  color: #808080;
+		}
+
+		tr:nth-child(even) td {
+		  background: #EEEEEE;
+		}
+		.Patients_info:hover {
+  		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+		.Appointments:hover {
+  		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+		.Not_Attended:hover {
+  		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+		.LogOut:hover {
+  		box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+
+		button:focus{
+			box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+  		border: thick solid #00d7c3;
+		}
+
+		.Search{
+			position:absolute;
+			margin-top:10px;
+			margin-left: 1250px;
+		}
+
+		.ViewPoint{
+			position:absolute;
+			margin-top:10px;
+			margin-left:150px;
+			font-size: 30px;
+			font-weight: bold;
+			color:#073763;
+		}
+
+		.Logo{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:50px;
+		}
+		.Patients_info{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:250px;
+		}
+
+		.Appointments{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:350px;
+		}
+
+		.Not_Attended{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:450px;
+		}
+
+		.LogOut{
+			font-size: 40px;
+			border-color: #9fc5f8;
+			border-width: thick;
+			color: #9fc5f8;
+			background-color:#073763;
+			position: relative;
+			left: 15px;
+			top:650px;
+		}
+
+	</style>
+</head>
+<body style="background-color: #f0f8ff;">
+
+	<div id="box1">
+		<div class="ViewPoint">Medical Records</div>
+		<div class="Search">
+			<form action="/action_page.php">
+				<input type="text" placeholder="Search.." name="searchbtn"></input>
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+		<div id="box2">
+			<button class="Logo">
+				<i class="fa fa-hospital-o"></i>
+			</button>
+			<button class="Patients_info">
+				<i class="fa fa-address-book-o"></i>
+			</button>
+			<button class="Appointments">
+				<i class="fa fa-calendar-o"></i>
+			</button>
+			<button class="Not_Attended">
+				<i class="fa fa-calendar-times-o"></i>
+			</button>
+			<button class="LogOut">
+				<i class="fa fa-power-off"></i>
+			</button>
+		</div>
+	</div>
+	<div style="height: 750px; overflow: auto">
+		<table class="data_grid">
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Surname</th>
+				<th>Date Of Birth</th>
+				<th>Gp Name</th>
+				<th>Blood Type</th>
+				<th>previous Medical History</th>
+				<th>Medication</th>
+			</tr>
+			<tr>
+				<td>123456</td>
+				<td>Maria</td>
+				<td>Anders</td>
+				<td>26/01/2000</td>
+				<td>Dr A</td>
+				<td>AB</td>
+				<td>No</td>
+				<td>NO</td>
+			</tr>
+			<tr>
+				<td>654321</td>
+				<td>Francisco</td>
+				<td>Chang</td>
+				<td>24/01/1980</td>
+				<td>Dr B</td>
+				<td>A+</td>
+				<td>Depression</td>
+				<td>Antidepressants</td>
+			</tr>
+			<tr>
+				<td>112233</td>
+				<td>Daisy</td>
+				<td>Joseph</td>
+				<td>31/01/1965</td>
+				<td>Dr A</td>
+				<td>Dr James</td>
+				<td>schizofrenia</td>
+				<td>No</td>
+			</tr>
+			<tr>
+				<td>332211</td>
+				<td>Thomas</td>
+				<td>Gates</td>
+				<td>24/04/1970</td>
+				<td>Dr Joseph</td>
+				<td>O+</td>
+				<td>none</td>
+				<td>none</td>
+			</tr>
+			<tr>
+				<td>526354</td>
+				<td>Luis</td>
+				<td>Beard</td>
+				<td>19/04/1983</td>
+				<td>Dr Blake</td>
+				<td>O-</td>
+				<td>none</td>
+				<td>Vitamins</td>
+			</tr>
+			<tr>
+				<td>332211</td>
+				<td>Thomas</td>
+				<td>Gates</td>
+				<td>24/04/1970</td>
+				<td>Dr Moon</td>
+				<td>AB</td>
+				<td>none</td>
+				<td>none</td>
+			</tr>
+			<tr>
+				<td>526354</td>
+				<td>Luis</td>
+				<td>Beard</td>
+				<td>19/04/1983</td>
+				<td>Dr B</td>
+				<td>O-</td>
+				<td>high blood sugar</td>
+				<td>insuline</td>
+			</tr>
+
+			<tr>
+				<td>332211</td>
+				<td>Thomas</td>
+				<td>Gates</td>
+				<td>24/04/1970</td>
+				<td>Dr Moon</td>
+				<td>AB</td>
+				<td>none</td>
+				<td>none</td>
+			</tr>
+
+
+
+			<tr>
+				<td>112233</td>
+				<td>Daisy</td>
+				<td>Joseph</td>
+				<td>31/01/1965</td>
+				<td>Dr A</td>
+				<td>B</td>
+				<td>schizofrenia</td>
+				<td>No</td>
+			</tr>
+
+
+	
+
+			<tr>
+				<td>332211</td>
+				<td>Thomas</td>
+				<td>Gates</td>
+				<td>24/04/1970</td>
+				<td>DR D</td>
+				<td>AB</td>
+				<td>Depression</td>
+				<td>Antidepressants</td>
+			</tr>
+
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>
